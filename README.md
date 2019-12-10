@@ -17,3 +17,12 @@ pin connections to nano are:
      12   ----->   SD
      13  ------>   SCK
 The second CAN module is connected to Mega. 
+      MEGA  ----->  CAN
+      10    ----->  CS
+      50    ----->  SO
+      51    ----->  SI
+      52    ----->  SCK
+
+
+Libraries for the code can be found using the link
+https://github.com/Seeed-Studio/CAN_BUS_Shield
