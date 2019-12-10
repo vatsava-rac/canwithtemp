@@ -27,3 +27,5 @@ The second CAN module is connected to Mega:
 
 Libraries for the code can be found using the link
 https://github.com/Seeed-Studio/CAN_BUS_Shield
+
+In the code the transmission rate of CAN bus is written as 1000Kbps. But the transmission happens at only 500Kbps which is the desired speed.
