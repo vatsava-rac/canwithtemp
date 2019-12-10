@@ -1,4 +1,4 @@
-
+//This code is written for Arduino Mega.
 #include <SPI.h>
 #include <mcp_can.h>
 
@@ -35,7 +35,7 @@ void loop() {
   Serial.print("len is =");
   Serial.println(len);
 
-   for(int i = 0; i<len; i++)    // print the data
+   for(int i = 0; i<len; i++)    // print the data by reading the individual elements in an array
         {
             Serial.print(buf[i]);
             Serial.print("\t");
