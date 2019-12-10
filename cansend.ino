@@ -29,18 +29,23 @@ uint8_t cel[2] = { 0, 0};
     
 void loop()
 {
-  digitalWrite(CS_PIN, LOW);
-  digitalWrite(spiCSPin, HIGH);
+  // SPI transmission happens only when the CS pin is low.
+  // So, for reading temperature 
+  digitalWrite(CS_PIN, LOW); // making CS pin of sensor low 
+  digitalWrite(spiCSPin, HIGH); // making CS pin of CAN module high
   float celsius = tcouple.readTempC();
   Serial.print("T in C = ");
+  Serial.println(celsius); // printing the temprature
+    
+  /* sending the temperature values as an array of size 2.
+  First we multiply the temperature to hundred and to convert it froom floating point number to decimak number
+  Then we divide with hundred to get first two digits. The remainder is found using % operator.
+  The two elements are tramsmitted as an array */
   celsius = celsius*100;
   cel[0] = celsius/100;
   cel[1] = (int)celsius%100;
-  Serial.println(celsius);
-  
-  Serial.println("tempe is ");
-
-  
+ 
+  // blocking the temperature sensor and using the CAN module for transmission
   digitalWrite(CS_PIN, HIGH);
   digitalWrite(spiCSPin, LOW);
   //Serial.println("Data sent !!!");
