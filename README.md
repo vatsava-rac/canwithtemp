@@ -12,8 +12,8 @@ pin connections to nano are:
     12    ------>  SO                
     13    ------>  SCK
     
-  NANO  ----->  SENSOR
-    9   ----->   CS  
-   12   ----->   SD
-   13  ------>   SCK
+    NANO  ----->  SENSOR
+      9   ----->   CS  
+     12   ----->   SD
+     13  ------>   SCK
 The second CAN module is connected to Mega. 
