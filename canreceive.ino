@@ -7,8 +7,7 @@ MCP_CAN CAN(SPI_CS_PIN);
 
 void setup() {
   // put your setup code here, to run once:
-  int a, b; 
-  float c;
+  
   Serial.begin(9600);
 
     while (CAN_OK != CAN.begin(CAN_1000KBPS))              // init can bus : baudrate = 500k
@@ -30,18 +29,11 @@ void loop() {
   
   uint32_t canId = CAN.getCanId();
   
-  CAN.readMsgBuf(&len, buf);
+  CAN.readMsgBuf(&len, buf);// reading data from CAN.
   Serial.print("Get data from ID: ");
   Serial.println(canId, HEX);
   Serial.print("len is =");
   Serial.println(len);
-  
- /*// tempe = celsius;
-  Serial.println("temperaure is received");
-  Serial.print("Temp is ");
-  Serial.println(buf, DEC);
-  Serial.print("check here");*/
-  
 
    for(int i = 0; i<len; i++)    // print the data
         {
