@@ -12,7 +12,7 @@ MCP_CAN CAN(spiCSPin);
 void setup()
 {
     Serial.begin(9600);
-    pinMode (CS_PIN, OUTPUT);
+    pinMode (CS_PIN, OUTPUT);  // making both the CS pins as output pins
     pinMode (spiCSPin, OUTPUT);
     
     Serial.println("Temp sensor");
