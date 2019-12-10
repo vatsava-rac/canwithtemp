@@ -16,7 +16,8 @@ pin connections to nano are:
       9   ----->   CS  
      12   ----->   SD
      13  ------>   SCK
-The second CAN module is connected to Mega. 
+The second CAN module is connected to Mega:
+
       MEGA  ----->  CAN
       10    ----->  CS
       50    ----->  SO
