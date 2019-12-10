@@ -30,4 +30,4 @@ https://github.com/Seeed-Studio/CAN_BUS_Shield
 
 In the code the transmission rate of CAN bus is written as 1000Kbps. But the transmission happens at only 500Kbps which is the desired speed.
 
-![alt tag](https://github.com/vatsava-rac/canwithtemp/blob/master/MCP6675_CAN_test-image.png/pathtoimg.png "screenshot of the logic analyzer")
+![image](https://github.com/vatsava-rac/canwithtemp/blob/master/MCP6675_CAN_test-image.png?raw=true)
