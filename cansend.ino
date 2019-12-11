@@ -49,6 +49,6 @@ void loop()
   digitalWrite(CS_PIN, HIGH);
   digitalWrite(spiCSPin, LOW);
   //Serial.println("Data sent !!!");
-  CAN.sendMsgBuf(0x5EC, 0, 2, cel);
+  CAN.sendMsgBuf(0x5DC, 1, 2, cel);
   delay(1000);
 }
